@@ -17,26 +17,32 @@
   <style>
     .video-slot {
       margin-top: 24px;
-      border: 1px dashed #94a3b8;
+      border: 1px solid var(--border);
       border-radius: 14px;
       background: #f8fafc;
-      padding: 24px;
+      padding: 20px;
       text-align: left;
     }
     .video-slot-frame {
       aspect-ratio: 16 / 9;
       border-radius: 10px;
       background: #0f172a;
-      color: #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
+      overflow: hidden;
       margin-bottom: 14px;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
     }
-    .video-slot-frame strong { color: #ffffff; font-size: 17px; margin-bottom: 6px; }
+    .video-slot-frame video {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      background: #0f172a;
+    }
+    .video-caption {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin: -6px 0 12px;
+    }
     .video-slot-timeline { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); font-size: 13px; color: var(--muted); }
     .proof-grid { display: grid; gap: 16px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .proof-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
@@ -91,16 +97,19 @@
         <div class="step"><strong>3. Dostajesz uwagi w Wordzie i PDF</strong><p>Kopia podglądowa <code>[PODGLĄD_UWAG]</code> tylko do odczytu oraz raport PDF do akt sprawy.</p></div>
       </div>
 
-      <div class="video-slot" aria-label="Slot na 60-sekundowe nagranie wideo">
+      <div class="video-slot" aria-label="60-sekundowe nagranie wideo testu offline">
         <div class="video-slot-frame">
-          <strong>Wideo 60 s: test w trybie samolotowym (w przygotowaniu do publikacji)</strong>
-          <span>Miejsce na odtwarzacz MP4 / YouTube pokazujący cały przebieg bez dostępu do sieci.</span>
+          <video controls playsinline preload="metadata" poster="demo-poster.png" aria-label="PismoGuard — test w trybie samolotowym na przykładowym pozwie">
+            <source src="demo-offline-60s.mp4" type="video/mp4" />
+            Twoja przeglądarka nie obsługuje wideo HTML5. <a href="demo-offline-60s.mp4">Pobierz nagranie MP4</a>.
+          </video>
         </div>
+        <p class="video-caption">Nagranie z rzeczywistego uruchomienia lokalnego silnika PismoGuard (PDFium + bazy offline) na syntetycznym pozwie <code>sample_pozew/</code> — 0 bajtów ruchu sieciowego.</p>
         <div class="video-slot-timeline">
-          <div><strong>0:00–0:10</strong> — Wyłączenie Wi-Fi w Windows i start programu offline.</div>
-          <div><strong>0:10–0:25</strong> — Przeciągnięcie folderu sprawy testowej na ikonę na Pulpicie.</div>
-          <div><strong>0:25–0:45</strong> — Podgląd trafień: sygnatura NSA, błędny NIP, brakujący załącznik i cytat PDF.</div>
-          <div><strong>0:45–0:60</strong> — Otwarcie kopii z uwagami w Wordzie i zapis raportu PDF do akt.</div>
+          <div><strong>0:00–0:09</strong> — Wyłączenie Wi-Fi (Tryb samolotowy, 0 B/s) i start programu offline.</div>
+          <div><strong>0:09–0:18</strong> — Przeciągnięcie folderu <code>sample_pozew/</code> i lokalna analiza (&lt; 1 s).</div>
+          <div><strong>0:18–0:41</strong> — 6 trafień: NSA I FZ 104/26, NIP, kwota słownie, brak zał. nr 4 i cytat PDF.</div>
+          <div><strong>0:41–0:56</strong> — Kopia z uwagami <code>[PODGLĄD_UWAG]</code> w Wordzie i raport PDF do akt.</div>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
-// Configure with your deployed Google Workspace Apps Script Web App URL (see web/google-workspace/SETUP_GOOGLE_WORKSPACE.md).
-const WORKSPACE_ENDPOINT = window.PISMOGUARD_WAITLIST_URL || "";
+// Configured with deployed Google Workspace Apps Script Web App URL (see web/google-workspace/SETUP_GOOGLE_WORKSPACE.md).
+const WORKSPACE_ENDPOINT =
+  window.PISMOGUARD_WAITLIST_URL ||
+  "https://script.google.com/macros/s/AKfycbxcHkFmUU7cMmc6lQI9EiqWYuSzfXrEZjdgMfTA4ad_dGTrc5WrChMYFi3mzQSyldRd/exec";
 
 const modal = document.getElementById("modal");
 const titleEl = document.getElementById("modal-title");

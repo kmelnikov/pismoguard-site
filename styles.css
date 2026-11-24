@@ -30,6 +30,6 @@ h1 { font-size:38px; line-height:1.18; max-width:780px; margin:0 auto 16px; }
 .modal-box { background:#fff; border-radius:14px; max-width:460px; width:100%; padding:24px; position:relative; }
 .close { position:absolute; top:12px; right:14px; border:none; background:none; font-size:24px; cursor:pointer; }
 label { display:block; font-size:13px; font-weight:600; margin-top:12px; }
-input[type="email"], input[type="text"] { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; margin-top:4px; font-size:14px; }
+input[type="email"], input[type="text"], select { width:100%; padding:10px 12px; border:1px solid #cbd5e1; border-radius:8px; margin-top:4px; font-size:14px; background:#fff; color:var(--ink); }
 .chk { font-weight:400; color:var(--muted); display:flex; gap:8px; align-items:flex-start; }
 .status { font-size:13px; font-weight:600; margin-top:10px; min-height:20px; }

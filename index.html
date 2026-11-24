@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PismoGuard — Sprawdź pozew i załączniki w 30 sekund (100% offline)</title>
-  <meta name="description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Weryfikuje załączniki (Dz.U. 2026 poz. 222), kwoty słownie, PESEL/NIP, cytaty PDF oraz daty orzeczeń — bez wysyłania akt do chmury." />
+  <title>PismoGuard — Sprawdź apelację, zażalenie i załączniki (100% offline)</title>
+  <meta name="description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Weryfikuje załączniki przed 1 marca 2027 r. (art. 125¹ § 2 KPC, Dz.U. 2026 poz. 222), kwoty słownie, PESEL/NIP, cytaty PDF oraz daty orzeczeń — bez wysyłania akt do chmury." />
   <link rel="canonical" href="https://pismoguard.melnikov.pl/" />
   <link rel="icon" href="icon.png" />
   <link rel="apple-touch-icon" href="icon.png" />
-  <meta property="og:title" content="PismoGuard — Sprawdź pozew i załączniki w 30 sekund (100% offline)" />
-  <meta property="og:description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Weryfikuje załączniki, kwoty słownie, PESEL/NIP, cytaty PDF i metryki orzeczeń lokalnie." />
+  <meta property="og:title" content="PismoGuard — Sprawdź apelację, zażalenie i załączniki (100% offline)" />
+  <meta property="og:description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Lokalny audyt załączników (1 marca 2027 / Dz.U. 2026 poz. 222), kwot słownie, PESEL/NIP, cytatów PDF i metryk orzeczeń." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pismoguard.melnikov.pl/" />
   <meta property="og:site_name" content="PismoGuard" />
@@ -66,13 +66,12 @@
 
   <section class="hero">
     <div class="wrap">
-      <div class="pill">🚧 Wersja Windows w przygotowaniu — wczesny dostęp · analiza akt lokalnie</div>
-      <h1>Sprawdź pozew i załączniki w 30 sekund — 100% offline</h1>
+      <div class="pill">⏳ Od 1 marca 2027 r. obowiązkowy Portal Informacyjny (art. 125¹ § 2 KPC) · Windows wczesny dostęp</div>
+      <h1>Sprawdź apelację, zażalenie i załączniki przed wysyłką — 100% offline</h1>
       <p class="lead">
-        Program desktopowy dla polskich kancelarii procesowych (<strong>wersja Windows w przygotowaniu — wczesny dostęp</strong>).
-        Wyłapuje błędy numeracji i nazw załączników (<strong>Dz.U. 2026 poz. 222</strong>), rozjazdy kwot „słownie”,
-        błędne <strong>PESEL/NIP/IBAN</strong>, podmienione cyfry w cytatach z PDF oraz rozbieżne daty orzeczeń
-        (w kontekście <strong>§ 23e KEA / KIRP</strong> i <strong>NSA I FZ 104/26</strong>).
+        Program desktopowy na Windows dla polskich kancelarii procesowych (<strong>wczesny dostęp</strong>).
+        Od <strong>1 marca 2027 r.</strong> wybrane pisma (m.in. apelacje, zażalenia i wnioski o uzasadnienie) wnoszone są przez Portal Informacyjny pod <strong>rygorem bezskuteczności</strong> (<strong>art. 125¹ § 2 i art. 125³ § 1 KPC</strong>, z zastrzeżeniem art. 125² § 1).
+        PismoGuard lokalnie wyłapuje błędy załączników (<strong>Dz.U. 2026 poz. 222</strong>), rozjazdy kwot „słownie”, błędne <strong>PESEL/NIP/IBAN</strong>, podmienione cyfry w cytatach z PDF oraz rozbieżne daty orzeczeń (<strong>§ 23e KEA / KIRP</strong>) — również w pozwach i pozostałych pismach, bez wysyłania akt do chmury.
       </p>
 
       <div class="cta-row">
@@ -90,21 +89,21 @@
 
   <section id="jak-dziala" class="section">
     <div class="wrap">
-      <h2>45-sekundowy test: 6 pułapek wykrytych w &lt; 1 s (100% offline)</h2>
+      <h2>45-sekundowy test silnika: 6 pułapek wykrytych w &lt; 1 s (100% offline)</h2>
       <div class="steps">
         <div class="step"><strong>1. Wyłączasz Wi-Fi</strong><p>Program działa w izolacji sieciowej Windows AppContainer — akta pozostają wyłącznie na komputerze kancelarii.</p></div>
-        <div class="step"><strong>2. Przeciągasz folder sprawy</strong><p>Jeden gest na ikonę <em>Sprawdź pismo</em> na Pulpicie (lub wbudowany pozew próbny bez ryzyka własnymi aktami).</p></div>
+        <div class="step"><strong>2. Przeciągasz folder sprawy</strong><p>Jeden gest na ikonę <em>Sprawdź pismo</em> na Pulpicie — działa dla apelacji, zażaleń, wniosków i pozwów (w zestawie pismo próbne).</p></div>
         <div class="step"><strong>3. Dostajesz uwagi w Wordzie i PDF</strong><p>Kopia podglądowa <code>[PODGLĄD_UWAG]</code> tylko do odczytu oraz raport PDF do akt sprawy.</p></div>
       </div>
 
       <div class="video-slot" aria-label="45-sekundowe nagranie wideo testu offline">
         <div class="video-slot-frame">
-          <video controls playsinline preload="metadata" poster="demo-poster-v2.png" aria-label="PismoGuard — 6 błędów wykrytych w 0,45 s bez chmury na przykładowym pozwie">
+          <video id="demo-video" controls playsinline preload="metadata" poster="demo-poster-v2.png" aria-label="PismoGuard — 6 błędów wykrytych w 0,45 s bez chmury na przykładowym piśmie">
             <source src="demo-offline-45s-v2.mp4" type="video/mp4" />
             Twoja przeglądarka nie obsługuje wideo HTML5. <a href="demo-offline-45s-v2.mp4">Pobierz nagranie MP4 (45 s)</a>.
           </video>
         </div>
-        <p class="video-caption">Wizualizacja oparta na rzeczywistym wyniku lokalnego silnika PismoGuard (<code>pismoguard-worker</code> + <code>PDFium</code> + testowa baza offline; mediana 0,45 s dla 3 uruchomień na <code>sample_pozew/</code>) — 0 chmury i 0 danych klientów.</p>
+        <p class="video-caption">Wizualizacja oparta na rzeczywistym wyniku lokalnego silnika PismoGuard (<code>pismoguard-worker</code> + <code>PDFium</code> + testowa baza offline; mediana 0,45 s dla 3 uruchomień na przykładowym <code>sample_pozew/</code> — identyczny silnik sprawdza apelacje, zażalenia i załączniki do Portalu Informacyjnego) — 0 chmury i 0 danych klientów.</p>
         <div class="video-slot-timeline">
           <div><strong>0:00–0:05</strong> — 6 ukrytych pułapek w pozwie: różnica 500 zł słownie, cytat 14 vs 30 dni, data NSA.</div>
           <div><strong>0:05–0:11</strong> — Upuszczenie folderu <code>sample_pozew/</code> i pełna lokalna analiza w 0,45 s.</div>
@@ -196,7 +195,7 @@
     <div class="wrap small-legal">
       <h3>Prywatność, Regulamin i RODO (rozdzielenie: program offline vs formularz zapisu)</h3>
       <p><strong>Akta spraw w programie PismoGuard:</strong> program działa w 100% lokalnie na komputerze kancelarii i nie wysyła dokumentów ani ich treści poza urządzenie — nie przetwarzamy danych klientów kancelarii i nie wymagamy umowy powierzenia z art. 28 RODO.</p>
-      <p><strong>Wyłącznie dane z formularza wczesnego dostępu i statystyka kliknięć bez cookies (art. 13 RODO):</strong> zapis jest bezpłatny i niezobowiązujący. Podany e-mail (oraz opcjonalny NIP) służy wyłącznie do jednorazowego wysłania informacji o wersji testowej (podstawa: zgoda, art. 6 ust. 1 lit. a RODO; dane przechowywane w Google Workspace do wysłania powiadomienia lub cofnięcia zgody). Kliknięcia przycisków wyboru platformy oraz parametry kampanii (UTM z adresu URL) są zapisywane zbiorczo bez plików cookie wyłącznie w celu pomiaru zainteresowania wersją Windows vs macOS (uzasadniony interes, art. 6 ust. 1 lit. f RODO). Administrator danych kontaktowych: Konstantin Melnikov (melnikov.pl), kontakt: <a href="mailto:pismoguard@melnikov.pl">pismoguard@melnikov.pl</a>; przysługuje prawo dostępu, usunięcia danych oraz skargi do Prezesa UODO.</p>
+      <p><strong>Wyłącznie dane z formularza wczesnego dostępu i statystyka wizyt bez cookies (art. 13 RODO):</strong> zapis jest bezpłatny i niezobowiązujący. Podany e-mail (oraz opcjonalny NIP i rola w kancelarii) służy wyłącznie do jednorazowego wysłania informacji o wersji testowej (podstawa: zgoda, art. 6 ust. 1 lit. a RODO; dane przechowywane w Google Workspace do wysłania powiadomienia lub cofnięcia zgody). Zdarzenia lejka (odsłona strony, odtworzenie demo, kliknięcia przycisków wyboru platformy) oraz parametry kampanii (UTM / <code>gclid</code> / <code>fbclid</code> z adresu URL i efemeryczny identyfikator sesji wyłącznie w pamięci RAM przeglądarki) są zapisywane bez plików cookie, bez <code>localStorage</code> i bez zewnętrznych pikseli śledzących wyłącznie w celu pomiaru skuteczności kampanii i zainteresowania Windows vs macOS (uzasadniony interes, art. 6 ust. 1 lit. f RODO; parametr <code>gclid</code> może służyć do zbiorczego raportowania konwersji offline w Google Ads). Administrator danych kontaktowych: Konstantin Melnikov (melnikov.pl), kontakt: <a href="mailto:pismoguard@melnikov.pl">pismoguard@melnikov.pl</a>; przysługuje prawo dostępu, usunięcia danych oraz skargi do Prezesa UODO.</p>
       <p>Dokumenty prawne: <a href="regulamin.html">Regulamin (B2B / art. 7aa / § 23e KEA)</a> · <a href="polityka-prywatnosci.html">Polityka prywatności (RODO)</a> · Zgłoszenia bezpieczeństwa (CRA): <a href="mailto:pismoguard+security@melnikov.pl">pismoguard+security@melnikov.pl</a>.</p>
     </div>
   </section>
@@ -211,6 +210,16 @@
         <input type="hidden" id="platform-input" name="platform" value="windows" />
         <label>E-mail kancelarii *
           <input type="email" id="email-input" name="email" required placeholder="mecenas@kancelaria.pl" />
+        </label>
+        <label>Rola w kancelarii (opcjonalnie)
+          <select id="role-input" name="role">
+            <option value="">— wybierz —</option>
+            <option value="adwokat">Adwokat</option>
+            <option value="radca_prawny">Radca prawny</option>
+            <option value="aplikant">Aplikant adwokacki / radcowski</option>
+            <option value="wspolnik_inhouse">Wspólnik / dział prawny</option>
+            <option value="inne">Inne</option>
+          </select>
         </label>
         <label>NIP kancelarii (opcjonalnie)
           <input type="text" id="nip-input" name="nip" placeholder="np. 1234563218" />

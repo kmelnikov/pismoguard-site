@@ -67,7 +67,7 @@ document.getElementById("waitlist-form").addEventListener("submit", async (ev) =
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-    statusEl.textContent = "Dziękujemy! Zapisano adres — wyślemy wiadomość przy starcie testów.";
+    statusEl.textContent = "Dziękujemy! Zgłoszenie zostało wysłane — wyślemy wiadomość przy starcie testów.";
     ev.target.reset();
   } catch (err) {
     statusEl.textContent = "Nie udało się zapisać — spróbuj ponownie za chwilę.";

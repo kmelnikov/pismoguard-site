@@ -90,26 +90,26 @@
 
   <section id="jak-dziala" class="section">
     <div class="wrap">
-      <h2>60-sekundowy test w trybie samolotowym</h2>
+      <h2>45-sekundowy test: 6 pułapek wykrytych w &lt; 1 s (100% offline)</h2>
       <div class="steps">
         <div class="step"><strong>1. Wyłączasz Wi-Fi</strong><p>Program działa w izolacji sieciowej Windows AppContainer — akta pozostają wyłącznie na komputerze kancelarii.</p></div>
         <div class="step"><strong>2. Przeciągasz folder sprawy</strong><p>Jeden gest na ikonę <em>Sprawdź pismo</em> na Pulpicie (lub wbudowany pozew próbny bez ryzyka własnymi aktami).</p></div>
         <div class="step"><strong>3. Dostajesz uwagi w Wordzie i PDF</strong><p>Kopia podglądowa <code>[PODGLĄD_UWAG]</code> tylko do odczytu oraz raport PDF do akt sprawy.</p></div>
       </div>
 
-      <div class="video-slot" aria-label="60-sekundowe nagranie wideo testu offline">
+      <div class="video-slot" aria-label="45-sekundowe nagranie wideo testu offline">
         <div class="video-slot-frame">
-          <video controls playsinline preload="metadata" poster="demo-poster.png" aria-label="PismoGuard — test w trybie samolotowym na przykładowym pozwie">
-            <source src="demo-offline-60s.mp4" type="video/mp4" />
-            Twoja przeglądarka nie obsługuje wideo HTML5. <a href="demo-offline-60s.mp4">Pobierz nagranie MP4</a>.
+          <video controls playsinline preload="metadata" poster="demo-poster-v2.png" aria-label="PismoGuard — 6 błędów wykrytych w 0,45 s bez chmury na przykładowym pozwie">
+            <source src="demo-offline-45s-v2.mp4" type="video/mp4" />
+            Twoja przeglądarka nie obsługuje wideo HTML5. <a href="demo-offline-45s-v2.mp4">Pobierz nagranie MP4 (45 s)</a>.
           </video>
         </div>
-        <p class="video-caption">Nagranie z rzeczywistego uruchomienia lokalnego silnika PismoGuard (PDFium + bazy offline) na syntetycznym pozwie <code>sample_pozew/</code> — 0 bajtów ruchu sieciowego.</p>
+        <p class="video-caption">Wizualizacja oparta na rzeczywistym wyniku lokalnego silnika PismoGuard (<code>pismoguard-worker</code> + <code>PDFium</code> + testowa baza offline; mediana 0,45 s dla 3 uruchomień na <code>sample_pozew/</code>) — 0 chmury i 0 danych klientów.</p>
         <div class="video-slot-timeline">
-          <div><strong>0:00–0:09</strong> — Wyłączenie Wi-Fi (Tryb samolotowy, 0 B/s) i start programu offline.</div>
-          <div><strong>0:09–0:18</strong> — Przeciągnięcie folderu <code>sample_pozew/</code> i lokalna analiza (&lt; 1 s).</div>
-          <div><strong>0:18–0:41</strong> — 6 trafień: NSA I FZ 104/26, NIP, kwota słownie, brak zał. nr 4 i cytat PDF.</div>
-          <div><strong>0:41–0:56</strong> — Kopia z uwagami <code>[PODGLĄD_UWAG]</code> w Wordzie i raport PDF do akt.</div>
+          <div><strong>0:00–0:05</strong> — 6 ukrytych pułapek w pozwie: różnica 500 zł słownie, cytat 14 vs 30 dni, data NSA.</div>
+          <div><strong>0:05–0:11</strong> — Upuszczenie folderu <code>sample_pozew/</code> i pełna lokalna analiza w 0,45 s.</div>
+          <div><strong>0:11–0:29</strong> — 4 zbliżenia: kwota i NIP, Dz.U. 2026 poz. 222, cytat z PDF, CBOSA/ISAP/SAOS.</div>
+          <div><strong>0:29–0:45</strong> — Kopia <code>[PODGLĄD_UWAG]</code> w Wordzie (tylko do odczytu), raport PDF i wczesny dostęp.</div>
         </div>
       </div>
     </div>
@@ -196,7 +196,7 @@
     <div class="wrap small-legal">
       <h3>Prywatność, Regulamin i RODO (rozdzielenie: program offline vs formularz zapisu)</h3>
       <p><strong>Akta spraw w programie PismoGuard:</strong> program działa w 100% lokalnie na komputerze kancelarii i nie wysyła dokumentów ani ich treści poza urządzenie — nie przetwarzamy danych klientów kancelarii i nie wymagamy umowy powierzenia z art. 28 RODO.</p>
-      <p><strong>Wyłącznie adres e-mail z formularza wczesnego dostępu (art. 13 RODO):</strong> zapis jest bezpłatny i niezobowiązujący. Podany e-mail (oraz opcjonalny NIP) służy wyłącznie do jednorazowego wysłania informacji o wersji testowej (podstawa: zgoda, art. 6 ust. 1 lit. a RODO; dane przechowywane w Google Workspace do wysłania powiadomienia lub cofnięcia zgody). Administrator danych kontaktowych: Konstantin Melnikov (melnikov.pl), kontakt: <a href="mailto:pismoguard@melnikov.pl">pismoguard@melnikov.pl</a>; przysługuje prawo dostępu, usunięcia danych oraz skargi do Prezesa UODO.</p>
+      <p><strong>Wyłącznie dane z formularza wczesnego dostępu i statystyka kliknięć bez cookies (art. 13 RODO):</strong> zapis jest bezpłatny i niezobowiązujący. Podany e-mail (oraz opcjonalny NIP) służy wyłącznie do jednorazowego wysłania informacji o wersji testowej (podstawa: zgoda, art. 6 ust. 1 lit. a RODO; dane przechowywane w Google Workspace do wysłania powiadomienia lub cofnięcia zgody). Kliknięcia przycisków wyboru platformy oraz parametry kampanii (UTM z adresu URL) są zapisywane zbiorczo bez plików cookie wyłącznie w celu pomiaru zainteresowania wersją Windows vs macOS (uzasadniony interes, art. 6 ust. 1 lit. f RODO). Administrator danych kontaktowych: Konstantin Melnikov (melnikov.pl), kontakt: <a href="mailto:pismoguard@melnikov.pl">pismoguard@melnikov.pl</a>; przysługuje prawo dostępu, usunięcia danych oraz skargi do Prezesa UODO.</p>
       <p>Dokumenty prawne: <a href="regulamin.html">Regulamin (B2B / art. 7aa / § 23e KEA)</a> · <a href="polityka-prywatnosci.html">Polityka prywatności (RODO)</a> · Zgłoszenia bezpieczeństwa (CRA): <a href="mailto:pismoguard+security@melnikov.pl">pismoguard+security@melnikov.pl</a>.</p>
     </div>
   </section>

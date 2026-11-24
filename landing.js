@@ -43,22 +43,13 @@ function sendPayload(payload) {
   if (!WORKSPACE_ENDPOINT) {
     return Promise.resolve(false);
   }
-  const serialized = JSON.stringify(payload);
-  if (payload.type === "event" && typeof navigator.sendBeacon === "function") {
-    const queued = navigator.sendBeacon(
-      WORKSPACE_ENDPOINT,
-      new Blob([serialized], { type: "text/plain;charset=UTF-8" })
-    );
-    if (queued) {
-      return Promise.resolve(true);
-    }
-  }
   return fetch(WORKSPACE_ENDPOINT, {
     method: "POST",
     mode: "no-cors",
+    credentials: "omit",
     keepalive: true,
     headers: { "Content-Type": "text/plain;charset=UTF-8" },
-    body: serialized,
+    body: JSON.stringify(payload),
   }).then(() => true);
 }
 

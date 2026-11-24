@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PismoGuard — Sprawdź pozew i załączniki w 30 sekund (100% offline)</title>
+  <meta name="description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Weryfikuje załączniki (Dz.U. 2026 poz. 222), kwoty słownie, PESEL/NIP, cytaty PDF oraz daty orzeczeń — bez wysyłania akt do chmury." />
+  <link rel="canonical" href="https://pismoguard.melnikov.pl/" />
+  <link rel="icon" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <meta property="og:title" content="PismoGuard — Sprawdź pozew i załączniki w 30 sekund (100% offline)" />
+  <meta property="og:description" content="Program desktopowy na Windows dla polskich kancelarii procesowych (wczesny dostęp). Weryfikuje załączniki, kwoty słownie, PESEL/NIP, cytaty PDF i metryki orzeczeń lokalnie." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pismoguard.melnikov.pl/" />
+  <meta property="og:site_name" content="PismoGuard" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .video-slot {
+      margin-top: 24px;
+      border: 1px dashed #94a3b8;
+      border-radius: 14px;
+      background: #f8fafc;
+      padding: 24px;
+      text-align: left;
+    }
+    .video-slot-frame {
+      aspect-ratio: 16 / 9;
+      border-radius: 10px;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .video-slot-frame strong { color: #ffffff; font-size: 17px; margin-bottom: 6px; }
+    .video-slot-timeline { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); font-size: 13px; color: var(--muted); }
+    .proof-grid { display: grid; gap: 16px; margin-top: 22px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .proof-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .proof-card ul, .proof-card ol { padding-left: 18px; margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+    .proof-card li + li { margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="logo">PismoGuard</div>
+      <div class="nav-links">
+        <a href="#jak-dziala">Jak działa</a>
+        <a href="#dowody-techniczne">Dowody techniczne</a>
+        <a href="#co-sprawdza">Zakres</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#prywatnosc">Prywatność</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="pill">🚧 Wersja Windows w przygotowaniu — wczesny dostęp · analiza akt lokalnie</div>
+      <h1>Sprawdź pozew i załączniki w 30 sekund — 100% offline</h1>
+      <p class="lead">
+        Program desktopowy dla polskich kancelarii procesowych (<strong>wersja Windows w przygotowaniu — wczesny dostęp</strong>).
+        Wyłapuje błędy numeracji i nazw załączników (<strong>Dz.U. 2026 poz. 222</strong>), rozjazdy kwot „słownie”,
+        błędne <strong>PESEL/NIP/IBAN</strong>, podmienione cyfry w cytatach z PDF oraz rozbieżne daty orzeczeń
+        (w kontekście <strong>§ 23e KEA / KIRP</strong> i <strong>NSA I FZ 104/26</strong>).
+      </p>
+
+      <div class="cta-row">
+        <button id="cta-windows" class="btn primary">Powiadom mnie o wersji Windows (3 sprawdzenia gratis)</button>
+        <button id="cta-macos" class="btn secondary">Korzystasz z Maca? Wersja macOS (powiadom mnie)</button>
+      </div>
+
+      <div class="trust-bar">
+        <span>🔒 Analiza akt w trybie samolotowym</span>
+        <span>✅ Planowana instalacja bez hasła administratora</span>
+        <span>📄 Planowana cena: 199 zł netto/mies. (automatyczna faktura VAT / KSeF dla VAT czynnych)</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="jak-dziala" class="section">
+    <div class="wrap">
+      <h2>60-sekundowy test w trybie samolotowym</h2>
+      <div class="steps">
+        <div class="step"><strong>1. Wyłączasz Wi-Fi</strong><p>Program działa w izolacji sieciowej Windows AppContainer — akta pozostają wyłącznie na komputerze kancelarii.</p></div>
+        <div class="step"><strong>2. Przeciągasz folder sprawy</strong><p>Jeden gest na ikonę <em>Sprawdź pismo</em> na Pulpicie (lub wbudowany pozew próbny bez ryzyka własnymi aktami).</p></div>
+        <div class="step"><strong>3. Dostajesz uwagi w Wordzie i PDF</strong><p>Kopia podglądowa <code>[PODGLĄD_UWAG]</code> tylko do odczytu oraz raport PDF do akt sprawy.</p></div>
+      </div>
+
+      <div class="video-slot" aria-label="Slot na 60-sekundowe nagranie wideo">
+        <div class="video-slot-frame">
+          <strong>Wideo 60 s: test w trybie samolotowym (w przygotowaniu do publikacji)</strong>
+          <span>Miejsce na odtwarzacz MP4 / YouTube pokazujący cały przebieg bez dostępu do sieci.</span>
+        </div>
+        <div class="video-slot-timeline">
+          <div><strong>0:00–0:10</strong> — Wyłączenie Wi-Fi w Windows i start programu offline.</div>
+          <div><strong>0:10–0:25</strong> — Przeciągnięcie folderu sprawy testowej na ikonę na Pulpicie.</div>
+          <div><strong>0:25–0:45</strong> — Podgląd trafień: sygnatura NSA, błędny NIP, brakujący załącznik i cytat PDF.</div>
+          <div><strong>0:45–0:60</strong> — Otwarcie kopii z uwagami w Wordzie i zapis raportu PDF do akt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dowody-techniczne" class="section alt">
+    <div class="wrap">
+      <h2>4 dowody techniczne dla sceptycznego mecenasa</h2>
+      <div class="proof-grid">
+        <div class="proof-card">
+          <h3>1. Jak sprawdzić brak wysyłki w Zaporze Windows</h3>
+          <ol>
+            <li>Otwórz <strong>Zapora Windows Defender z zabezpieczeniami zaawansowanymi</strong> i utwórz regułę wychodzącą blokującą <code>pismoguard-worker.exe</code> oraz <code>pismoguard-pdf.exe</code> — program wykona pełną analizę bez błędu.</li>
+            <li>W <strong>Monitorze Zasobów</strong> (zakładka <em>Sieć</em>) zobaczysz 0 bajtów ruchu podczas sprawdzania akt.</li>
+            <li>Zweryfikuj jawny skrót <code>SHA-256</code> podpisanego instalatora <code>.exe</code> przed uruchomieniem.</li>
+          </ol>
+        </div>
+        <div class="proof-card">
+          <h3>2. Co sprawdzamy</h3>
+          <ul>
+            <li><strong>Dz.U. 2026 poz. 222:</strong> format A4, limit 100 MB, nazwy plików (Zał. 2), autonumeracja <code>&lt;w:numPr&gt;</code> i wykaz załączników.</li>
+            <li><strong>Kwoty i sumy kontrolne:</strong> zgodność „słownie” oraz PESEL, NIP (mod 11), REGON, IBAN/NRB.</li>
+            <li><strong>Cytaty i źródła:</strong> dosłowne cytaty z warstwy tekstowej PDF oraz lokalne bazy ISAP/ELI (9 kodeksów), SAOS i CBOSA (2024–2026).</li>
+          </ul>
+        </div>
+        <div class="proof-card">
+          <h3>3. Czego NIE robimy</h3>
+          <ul>
+            <li>Nie generujemy treści pism przy użyciu modeli LLM.</li>
+            <li>Nie wysyłamy ani nie przechowujemy akt klientów na serwerach zewnętrznych.</li>
+            <li>Nie instalujemy wtyczek do MS Word ani nie wymagamy wsparcia działu IT.</li>
+            <li>Nie zastępujemy osobistej oceny prawnej pełnomocnika (§ 23e KEA / KIRP).</li>
+          </ul>
+        </div>
+        <div class="proof-card">
+          <h3>4. Cennik (bez telefonów)</h3>
+          <ul>
+            <li><strong>0 zł (Test):</strong> wbudowany pozew próbny + 3 pełne sprawdzenia własnych spraw bez karty.</li>
+            <li><strong>Solo / Boutique (do 3 PC):</strong> 199 zł netto/mies. lub <strong>1 990 zł netto/rok</strong> (2 mies. gratis, Przelewy24/BLIK/karta).</li>
+            <li><strong>Kancelaria (do 10 PC):</strong> 490 zł netto/mies. lub 4 900 zł netto/rok. Automatyczna Faktura VAT / KSeF i anulowanie 1 kliknięciem.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="co-sprawdza" class="section">
+    <div class="wrap">
+      <h2>Co dokładnie sprawdza PismoGuard</h2>
+      <div class="grid">
+        <div class="card"><h3>Dz.U. 2026 poz. 222</h3><p>Zgodność numeracji załączników (w tym autonumeracji Word), format A4, limit 100 MB, niedozwolone nazwy plików (Zał. 2).</p></div>
+        <div class="card"><h3>Kwoty „słownie” i sumy kontrolne</h3><p>Rozjazdy między liczbą a zapisem słownie (np. 12 500 zł vs „dwanaście tysięcy”), NIP (mod 11), PESEL, REGON, IBAN/NRB.</p></div>
+        <div class="card"><h3>Dosłowne cytaty w PDF</h3><p>Weryfikacja cytatów z pisma wobec warstwy tekstowej załączników PDF — wyłapuje podmienione cyfry i daty (np. 14 dni vs 30 dni).</p></div>
+        <div class="card"><h3>Przepisy i metryki orzeczeń</h3><p>Lokalne bazy ISAP/ELI (9 kodeksów, status uchylony jako ostrzeżenie), SAOS oraz wybrane orzeczenia CBOSA (od 2024 r.).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cennik" class="section alt">
+    <div class="wrap">
+      <h2>Prosty cennik — bez telefonów sprzedażowych</h2>
+      <p class="muted" style="margin-top:-6px;">Planowane stawki po premierze. <strong>Pierwsze 20 kancelarii (Founding 20)</strong> otrzymuje gwarancję niezmienności ceny na 24 miesiące oraz bezpłatny dostęp do v1.0.1 i wersji macOS v1.1 (po jej uruchomieniu).</p>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Start / Test</h3>
+          <div class="price">0 zł</div>
+          <p>Wbudowany syntetyczny pozew + <strong>3 pełne sprawdzenia</strong> własnych spraw bez karty płatniczej.</p>
+        </div>
+        <div class="price-card featured">
+          <h3>Solo / Boutique (do 3 PC)</h3>
+          <div class="price">199 zł <span>netto / mies.</span></div>
+          <p><strong>Lub 1 990 zł netto/rok (2 mies. gratis · karta, BLIK, Przelewy24).</strong><br>244,77 zł brutto/mies. przy 23% VAT. Automatyczna faktura (VAT / KSeF dla podatników VAT czynnych), 14 dni gwarancji satysfakcji i anulowanie 1 kliknięciem.</p>
+        </div>
+        <div class="price-card">
+          <h3>Kancelaria (do 10 PC)</h3>
+          <div class="price">490 zł <span>netto / mies.</span></div>
+          <p><strong>Lub 4 900 zł netto/rok (2 mies. gratis).</strong><br>Jedna zbiorcza faktura na NIP kancelarii, pliki <code>.lic</code> dla sieci zamkniętych na żądanie, cotygodniowe aktualizacje lokalnych baz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prywatnosc" class="section">
+    <div class="wrap small-legal">
+      <h3>Prywatność, Regulamin i RODO (rozdzielenie: program offline vs formularz zapisu)</h3>
+      <p><strong>Akta spraw w programie PismoGuard:</strong> program działa w 100% lokalnie na komputerze kancelarii i nie wysyła dokumentów ani ich treści poza urządzenie — nie przetwarzamy danych klientów kancelarii i nie wymagamy umowy powierzenia z art. 28 RODO.</p>
+      <p><strong>Wyłącznie adres e-mail z formularza wczesnego dostępu (art. 13 RODO):</strong> zapis jest bezpłatny i niezobowiązujący. Podany e-mail (oraz opcjonalny NIP) służy wyłącznie do jednorazowego wysłania informacji o wersji testowej (podstawa: zgoda, art. 6 ust. 1 lit. a RODO; dane przechowywane w Google Workspace do wysłania powiadomienia lub cofnięcia zgody). Administrator danych kontaktowych: Konstantin Melnikov (melnikov.pl), kontakt: <a href="mailto:pismoguard@melnikov.pl">pismoguard@melnikov.pl</a>; przysługuje prawo dostępu, usunięcia danych oraz skargi do Prezesa UODO.</p>
+      <p>Dokumenty prawne: <a href="regulamin.html">Regulamin (B2B / art. 7aa / § 23e KEA)</a> · <a href="polityka-prywatnosci.html">Polityka prywatności (RODO)</a> · Zgłoszenia bezpieczeństwa (CRA): <a href="mailto:pismoguard+security@melnikov.pl">pismoguard+security@melnikov.pl</a>.</p>
+    </div>
+  </section>
+
+  <!-- Honest Waitlist Modal (Windows G1 + macOS Fake-Door) -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button id="modal-close" class="close" aria-label="Zamknij">&times;</button>
+      <h3 id="modal-title">Powiadom mnie o wersji Windows</h3>
+      <p id="modal-desc">Zostaw służbowy e-mail kancelarii — wyślemy link do bezpłatnej wersji testowej (3 sprawdzenia bez karty).</p>
+      <form id="waitlist-form">
+        <input type="hidden" id="platform-input" name="platform" value="windows" />
+        <label>E-mail kancelarii *
+          <input type="email" id="email-input" name="email" required placeholder="mecenas@kancelaria.pl" />
+        </label>
+        <label>NIP kancelarii (opcjonalnie)
+          <input type="text" id="nip-input" name="nip" placeholder="np. 1234563218" />
+        </label>
+        <label class="chk">
+          <input type="checkbox" required /> Wyrażam zgodę na jednorazowe powiadomienie e-mail o dostępności wersji testowej PismoGuard.
+        </label>
+        <button type="submit" class="btn primary full">Zapisz się na wczesny dostęp</button>
+        <p id="form-status" class="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="landing.js"></script>
+</body>
+</html>
